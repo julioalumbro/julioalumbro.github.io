@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    color: #222;
+    background-color: #f5f7f8;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #245b78;
+    text-align: center;
+}
+
+h2 {
+    color: #245b78;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #555;
+    text-align: center;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+#controls label {
+    font-weight: bold;
+}
+
+select {
+    margin-left: 5px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.chart-section,
+.write-up {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.chart-section h2,
+#chart-description {
+    margin-top: 0;
+    text-align: center;
+}
+
+#chart-description {
+    color: #666;
+    font-size: 14px;
+}
+
+#vis svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+.axis-label {
+    font-size: 14px;
+}
+
+.grid line {
+    stroke: #ddd;
+}
+
+.grid path {
+    display: none;
+}
+
+.weather-line {
+    fill: none;
+    stroke: #2b7a9b;
+    stroke-width: 2.5px;
+}
+
+.weather-point {
+    fill: #2b7a9b;
+    opacity: 0.45;
+    stroke: transparent;
+    stroke-width: 10px;
+}
+
+.weather-point:hover {
+    fill: #d95f02;
+    opacity: 1;
+}
+
+.extreme-point {
+    stroke: white;
+    stroke-width: 2px;
+    pointer-events: none;
+}
+
+.extreme-label {
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#summary {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#summary p {
+    margin: 0;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    font-size: 13px;
+}
+
+.write-up h2 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.write-up h2:first-child {
+    margin-top: 0;
+}
+
+.todo {
+    color: #8a3b12;
+}
+
+footer {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    #controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #summary {
+        display: block;
+        text-align: center;
+    }
+
+    #summary p {
+        margin: 5px 0;
+    }
+
+    select {
+        display: block;
+        width: 100%;
+        margin: 5px 0 0;
+    }
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2017 U.S. Weather Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1>2017 U.S. Weather Explorer</h1>
+        <p class="intro">
+            How did temperature, precipitation, snow, and wind change across U.S.
+            states and territories from January through September 2017?
+        </p>
+
+        <section id="controls">
+            <label>
+                State:
+                <select id="state-select"></select>
+            </label>
+
+            <label>
+                Weather measurement:
+                <select id="metric-select"></select>
+            </label>
+
+            <label>
+                Month:
+                <select id="month-select"></select>
+            </label>
+        </section>
+
+        <section class="chart-section">
+            <h2 id="chart-title">Daily Average Temperature in Maryland</h2>
+            <p id="chart-description">
+                Hover over a point for details. The highest and lowest days are highlighted.
+            </p>
+            <div id="vis"></div>
+            <div id="summary">
+                <p><strong>Average:</strong> <span id="average-value">—</span></p>
+                <p><strong>Highest:</strong> <span id="highest-value">—</span></p>
+                <p><strong>Lowest:</strong> <span id="lowest-value">—</span></p>
+            </div>
+        </section>
+
+        <section class="write-up">
+            <h2>About the Dataset</h2>
+            <p>
+                The course weather dataset contains daily measurements from NOAA weather
+                stations from January 1 through September 21, 2017. This project uses
+                temperature, precipitation, snow, and wind measurements for U.S. states
+                and territories. To make the dataset small enough for a webpage, available
+                station measurements were averaged for each state and date.
+            </p>
+
+            <h2>Design Decisions</h2>
+            <p>
+                A line chart was chosen because position along a shared time axis makes
+                daily and seasonal changes easy to see. The state, measurement, and month
+                dropdowns provide dynamic filtering. Hovering over a point provides details
+                on demand, while the high and low annotations call attention to unusual
+                days. We considered a map, but a map would make changes over time harder to
+                compare. We also avoided showing every station because that would make the
+                chart crowded and difficult to read.
+            </p>
+
+            <h2>Development Process</h2>
+            <p class="todo">
+                TODO
+            </p>
+
+            <h2>Sources</h2>
+            <p>
+                Data source: <a href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily">NOAA/NCEI Global Historical Climatology Network Daily</a>,
+                provided through the CMSC471 course dataset. The page structure was adapted
+                from Labs 4–5, and the visualization was built with D3.js.
+            </p>
+
+            <h2>Use of AI</h2>
+            <p>
+                TODO
+            </p>
+        </section>
+
+        <footer>
+            <p>CMSC471 Assignment 1 — Matthew Chin, Ben Li, and Julio Gabriel Alumbro</p>
+        </footer>
+    </main>
+
+    <div id="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

@@ -35,7 +35,6 @@ Then open <http://localhost:8000>.
 - View the highlighted highest and lowest observations.
 
 These cover dynamic filtering and details-on-demand from the assignment requirements.
-
 The original CSV is large, so the webpage uses a smaller file containing state-level daily averages.
 
 ## Before submitting
